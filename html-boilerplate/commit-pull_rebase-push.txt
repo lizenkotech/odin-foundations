@@ -1,0 +1,105 @@
+Git Workflow Cheat Sheet – Odin Projects
+========================================
+
+1. Initialize / Clone Project
+-----------------------------
+- For a new project locally:
+  git init
+- If cloning an existing GitHub repo:
+  git clone <repository-URL>
+
+2. Check Status
+---------------
+- See which files are staged, modified, or untracked:
+  git status
+
+3. Stage Files for Commit
+-------------------------
+- Stage all changes:
+  git add .
+- Stage specific files:
+  git add filename
+
+4. Commit Changes
+-----------------
+- Commit staged changes with a message:
+  git commit -m "Describe your changes"
+
+5. Pull Remote Changes (Safe)
+-----------------------------
+- Before pushing, fetch any remote updates and rebase:
+  git pull origin main --rebase
+
+6. Push to GitHub
+-----------------
+- Push your local commits to the main branch on GitHub:
+  git push origin main
+- For first push or if history differs:
+  git push -u origin main
+- Only use force push for brand-new repos or overwriting:
+  git push -u origin main --force
+
+7. One-Line Daily Routine
+-------------------------
+- Stage, commit, pull, and push in one command:
+  git add . && git commit -m "Your message" && git pull --rebase && git push
+
+8. Tips
+-------
+- Commit often; every meaningful change is a snapshot.
+- Keep one Git repo per project folder.
+- Use descriptive commit messages.
+- Avoid editing files directly on GitHub if you have a local copy.
+- If a push is rejected due to remote changes, always pull first.
+
+9. Recommended Folder Structure (for Odin projects)
+----------------------------------------------------
+repos/
+├── html-boilerplate/
+├── odin-links-and-images/
+└── odin-recipes/
+
+10. Resources
+-------------
+- GitHub Docs: https://docs.github.com
+- Git Basics (The Odin Project)
+
+
+
+
+
+
+git add . && git commit -m "Your message" && git pull --rebase && git push
+
+
+
+
+Step 1: Force push your local files
+git push -u origin main --force
+
+git add .
+git commit -m "Update recipe page"
+git push
+
+git add .
+git commit -m "Describe what you changed"
+
+git pull origin main --rebase
+
+git push origin main
+
+git pull --rebase && git push
+
+HTTPS = username/password/token every time
+SSH = key on your computer, push/pull automatically
+
+HTTPS_LINKS;
+
+odin-links-and-images: https://github.com/lizenkotech/odin-foundations.git
+
+odin-recipes; https://github.com/lizenkotech/odin-recipes.git
+
+
+My landing page project; https://github.com/lizenkotech/landing-page.git
+
+photo gallery tutorial ionic4; https://github.com/lizenkotech/photo-gallery-tutorial-ionic4.git
