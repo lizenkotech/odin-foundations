@@ -1,0 +1,294 @@
+/* =========================
+   1. RESET (minimal)
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   2. BASE PAGE
+========================= */
+body {
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    background-color: rgb(201, 238, 237);
+    color: #222;
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+/* =========================
+   3. HEADINGS
+========================= */
+h1 {
+    text-align: center;
+    color: #00539f;
+    text-shadow: 2px 2px 1px black;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin: 20px 0 10px;
+}
+
+h3 {
+    margin: 15px 0 10px;
+}
+
+h4 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #00539f;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* subtitle */
+.subtitle {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+/* links box */
+.recipe-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.recipe-links a {
+    text-decoration: none;
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    color: #222;
+    transition: 0.2s;
+}
+
+.recipe-links a:hover {
+    background: #00539f;
+    color: white;
+}
+
+/* footer */
+.footer {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* =========================
+   4. TEXT
+========================= */
+p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+li {
+    background-color: rgb(223, 236, 204);
+    border: 1px solid black;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+/* =========================
+   5. CARD COMPONENT
+========================= */
+.card {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.card-item {
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+    gap: 8px;
+}
+
+.card p {
+    flex: 2;
+    background: rgb(159, 233, 239);
+    border: 3px solid #11d6f4;
+    padding: 15px;
+    max-width: 400px;
+    margin: 10px auto 30px;
+    text-align: center;
+    border-radius: 6px;
+    border: 3px solid #11d6f4;
+    background: rgb(159, 233, 239);
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.card-item {
+    flex: 2;
+    min-width: 120px;
+    background: rgb(159, 233, 239);
+    border: 3px solid #11d6f4;
+    padding: 15px;
+    margin: 10px auto 30px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+----->.recipe-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid rgb(19, 127, 139);
+}
+
+.recipe-header {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 40px;
+
+    border-bottom: 2px solid #1684a2;
+    padding-bottom: 20px;
+}
+
+
+.recipe-info {
+    max-width: 500px;
+}
+
+@media (max-width: 700px) {
+    .recipe-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .recipe-image img {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+.nutrition-box {
+    background: rgb(159, 233, 239);
+    border: 5px solid #11d6f4;
+    padding: 15px;
+    max-width: 300px;
+    margin: 10px auto 30px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nutrition-box p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+}
+
+/* =========================
+   6. IMAGES
+========================= */
+
+img {
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 200px;
+    border: 2px solid black;
+
+}
+
+.recipe-image img {
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 250px;
+    border: 2px solid black;
+}
+
+.source {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.source a {
+    color: #00539f;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.source a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   7. NAVIGATION
+========================= */
+nav {
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(223, 236, 204);
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   8. UTILITIES
+========================= */
+.logo-odin {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: auto;
+}
+
+.logo-odin img {
+    width: 40px;
+    height: 40px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.red-text-shadow {
+    text-shadow: red 0 -2px;
+}
+
+.alert-text {
+    color: red;
+}
+
+/* styles.css */
+
+.alert-text {
+    color: red;
+}
+
+:root {
+    --color-background: #ffffff;
+    --color-main: #fcfcfc;
+    --color-main-border: #f2f2f2;
+    --color-blockquote: #f5f5f5;
+    --color-accent: #d54215;
+    --color-button-border: #dedede;
+    --color-text-primary: #202020;
+    --color-text-secondary: #404040;
+    --color-text-tertiary: #808080;
+    --color-shadow: #cccccc;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');

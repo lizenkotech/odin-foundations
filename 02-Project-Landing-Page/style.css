@@ -1,0 +1,387 @@
+:root {
+    --background-dark-color: #1f2937;
+    --background-secondary-color: #e5e7eb;
+    --background-button-color: #3382f6;
+    --text-primary-color: #f9faf8;
+    --text-secondary-color: #e5e7eb;
+    --text-alt-color: #1f2937;
+}
+
+/* =========================
+   1. RESET+BODY
+========================*/
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0a0a0a;
+    color: #e0a3ff;
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* glowing animated background layer */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+
+    background-image:
+        linear-gradient(rgba(248, 3, 207, 0.345), rgba(13, 0, 255, 0.203)),
+        url("/shared-assets/images/examples/lizard.png");
+
+}
+
+/* animation movement */
+@keyframes pulseMove {
+    0% {
+        transform: scale(1.2) translateY(0px);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.25) translateY(-20px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.2) translateY(0px);
+        opacity: 0.8;
+    }
+}
+
+.header {
+    background-image: url("./images/LZD-COVER.PNG");
+    background-size: cover;
+    background-position: center 40%;
+    position: relative;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 200px;
+    height: 70vh;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.75) 0%,
+            rgba(0, 0, 0, 0.3) 40%,
+            rgba(0, 0, 0, 0.1) 70%);
+}
+
+/* NAV TOP RIGHT */
+.nav-wrapper {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 3;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+
+    padding: 12px 20px;
+    border-radius: 12px;
+
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    gap: 25px;
+
+    list-style: none;
+
+    padding: 12px 20px;
+    border-radius: 14px;
+
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    box-shadow:
+        0 0 15px rgba(224, 163, 255, 0.25),
+        0 0 40px rgba(161, 223, 234, 0.1);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+    color: white;
+
+    max-width: 600px;
+}
+
+.nav-links a {
+    color: #e0a3ff;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: white;
+    text-shadow: 0 0 10px rgba(224, 163, 255, 0.8);
+}
+
+/* =========================
+   GALLERY PAGE
+=========================*/
+
+.gallery-page {
+    background: #0a0a0a;
+    color: white;
+}
+
+/* title */
+.page-title {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 28px;
+    color: #e0a3ff;
+}
+
+/* WALL layout */
+.album-wall {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 18px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* TILE */
+.album-tile {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* IMAGE */
+.album-tile img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* HOVER EFFECT */
+.album-tile:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 25px rgba(224, 163, 255, 0.35);
+}
+
+.album-tile:hover img {
+    transform: scale(1.1);
+}
+
+/* DARK OVERLAY */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.1));
+    display: flex;
+    align-items: flex-end;
+    padding: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.album-tile:hover .overlay {
+    opacity: 1;
+}
+
+.overlay p {
+    font-size: 14px;
+    color: #fff;
+}
+
+/* PLAY ICON */
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+
+    font-size: 28px;
+    color: white;
+
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(224, 163, 255, 0.25);
+    border: 1px solid rgba(224, 163, 255, 0.6);
+
+    backdrop-filter: blur(6px);
+
+    opacity: 0;
+    transition: all 0.25s ease;
+}
+
+.album-tile:hover .play-icon {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 0 20px rgba(224, 163, 255, 0.5);
+}
+
+/* =========================
+   4. INFO SECTION (CARDS – VERY IMPORTANT)
+========================*/
+.info {
+    text-align: center;
+    padding: 0px;
+}
+
+
+.info-cards {
+    display: flex;
+    flex-direction: row;
+
+    /* IMPORTANT */
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: nowrap;
+    /* prevents stacking */
+}
+
+.card {
+    width: 180px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(224, 163, 255, 0.2);
+    border-radius: 14px;
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    gap: 20px;
+
+    position: relative;
+    overflow: hidden;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card img {
+    width: 160px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 25px rgba(224, 163, 255, 0.4),
+        0 0 60px rgba(161, 223, 234, 0.2);
+    border-color: rgba(224, 163, 255, 0.6);
+}
+
+.card:hover img {
+    transform: scale(3.08);
+}
+
+.card p {
+    font-size: 25px;
+    color: #e0a3ff;
+    opacity: 0.9;
+}
+
+.logo img {
+    width: 99px;
+    height: 99px;
+    border-radius: 50%;
+    border: 2px solid #e0a3ff;
+    box-shadow: 0 0 15px rgba(224, 163, 255, 0.5);
+}
+
+/* =========================
+5. QUOTE SECTION (ODIN REQUIRED)
+========================*/
+
+.quote {
+
+    text-align: left;
+    font-style: italic;
+    padding: 60px;
+    color: #ccc;
+}
+
+/* =========================
+6. CTA (BOOKING SECTION)
+========================*/
+.cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 80px auto;
+    padding: 40px;
+
+    max-width: 900px;
+
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(224, 163, 255, 0.3);
+    border-radius: 10px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    background: #a1dfea;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+footer {
+    width: 100%;
+    background: #1F2937;
+    color: #F9FAF8;
+    text-align: center;
+    padding: 40px 20px;
+    padding-bottom: 30px;
+
+    /* IMPORTANT */
+    position: relative;
+    left: 0;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="player-button">Player 1: Chris</button>
+
+  <script src="javascript.js"></script>
+  <script>
+    // Your JavaScript goes here!
+    let firstName = "John";
+    let lastName = "Doe";
+
+    console.log(firstName);
+    console.log(lastName);
+    console.log("Hello, World!");
+
+    // Example variables
+    // let age = 11;
+    // console.log(age);
+    // age = 54;
+    // console.log(age);
+    // const pi = 3.14;
+    // pi = 10; // will throw
+
+    const button = document.getElementById("player-button");
+
+    function updateName() {
+      const name = prompt("Enter a new name");
+      if (name !== null) button.textContent = `Player 1: ${name}`;
+    }
+
+    button.addEventListener("click", updateName);
+    // let can be re-assigned; const cannot.
+  </script>
+
+</body>
+
+</html>

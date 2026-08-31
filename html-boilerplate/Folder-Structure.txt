@@ -1,0 +1,24 @@
+/Users/alice/repos/
+│
+├── html-boilerplate/
+│   ├── index.html
+│   └── style.css
+│
+├── odin-links-and-images/
+│   ├── index.html
+│   ├── style.css
+│   └── pages/
+│       ├── about.html
+│       ├── burger.html
+│       ├── lasagna.html
+│       └── pizza.html
+│   └── images/
+│       └── charlesdeluvio-Mv9hjnEUHR4-unsplash.jpg
+│
+└── odin-recipes/
+    ├── index.html
+    ├── style.css        ← optional
+    └── recipes/
+        ├── lasagna.html
+        ├── pizza.html
+        └── burger.html
