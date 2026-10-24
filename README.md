@@ -10,17 +10,6 @@ I'm using this repository to document my progress and build a portfolio of the p
 
 ## 🚀 Projects
 
-| #  | Project                                                    | Technologies          | Live Demo                                                       | Status         |
-| -- | ---------------------------------------------------------- | --------------------- | --------------------------------------------------------------- | -------------- |
-| 01 | [🍳 Recipes](./01-Project-Recipes/)                        | HTML, CSS             | —                                                               | ✅ Completed    |
-| 02 | [🌊 Landing Page](./02-Project-Landing-Page/)              | HTML, CSS, JavaScript | [🌐 Live Demo](https://lizenkotech.github.io/odin-foundations/) | ✅ Completed    |
-| 03 | [✊ Rock Paper Scissors](./03-Project-Rock-Paper-Scissors/) | HTML, JavaScript      | —                                                               | 🚧 In progress |
-| 04 | [🎨 Etch-a-Sketch](./04-Project-Etch-a-Sketch/)            | HTML, CSS, JavaScript | —                                                               | ⏳ Not started  |
-| 05 | [🧮 Calculator](./05-Project-Calculator/)                  | HTML, CSS, JavaScript | —                                                               | ⏳ Not started  |
-
----
-## 🚀 Projects
-
 | # | Project | Technologies | Live Demo | Status |
 |---|---|---|---|---|
 | 01 | 🍳 [Recipes](https://github.com/lizenkotech/odin-foundations/tree/main/01-Project-Recipes) | HTML, CSS | [🌐 Live Demo](https://lizenkotech.github.io/odin-foundations/01-Project-Recipes/index.html) | ✅ Completed |
